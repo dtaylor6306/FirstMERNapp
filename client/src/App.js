@@ -1,10 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
 import React from "react";
+import Router from "./Router";
+
+axios.defaults.withCredentials = true;
 
 function App() {
-  return <>App</>
-}
+  return (
+    <>
+    <Router/>
+    </>
+  )
+};
 
 
 export default App;
