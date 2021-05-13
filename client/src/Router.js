@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
 import {BrowserRouter, Switch,Route} from "react-router-dom";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Navbar from "./components/layout/Navbar";
+import AuthContext from "./context/AuthContext";
 
 function Router(){
+    const {loggedIn} = useContext(AuthContext);
+    
     return (
     <BrowserRouter>
         <Navbar/>
@@ -12,15 +15,24 @@ function Router(){
             <Route exact path = "/">
                 <div>Home</div>
             </Route >
-            <Route path = "/register">
-                <Register/>
-            </Route>
-            <Route path = "/login">
-                <Login/>
-            </Route>
-            <Route path = "/customer">
-                <div>Customer</div>
-            </Route>
+            {loggedIn === false && (
+                    <>
+                    <Route path = "/register">
+                        <Register/>
+                    </Route>
+                    <Route path = "/login">
+                        <Login/>
+                    </Route>
+                </>
+            )}
+            {loggedIn === true && (
+                <>
+                    <Route path = "/customer">
+                     <div>Customers</div>
+                    </Route>
+                </>
+            )}
+
         </Switch>
     </BrowserRouter>
     )
