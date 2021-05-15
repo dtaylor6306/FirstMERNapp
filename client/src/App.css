@@ -1,3 +1,15 @@
 .navBarLink {
     margin: 5px;
   }
+.homeDiv{
+    text-align: center;
+}
+
+.homeDiv h1{
+    display: inline;
+    height: 300px;
+    width:300px;
+    
+    border-bottom: black inset;
+
+}

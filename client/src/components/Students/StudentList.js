@@ -4,7 +4,8 @@ import React from "react";
 function StudentList({students}) {
     function renderStudents(){
         return students.map((student, i)=>{
-            return <li key = {i}>{student.firtName, student.lastName, student.svnNumber}</li>
+            var studentData = [student.firstName, student.lastName, student.svnNumber].join(" ");
+            return <li key = {i}>{studentData}</li>
         })
     };
 
