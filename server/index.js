@@ -32,4 +32,4 @@ mongoose.connect(process.env.MDB_CONNECT,
 // setting up routes
 
 app.use("/auth", require("./routers/userRouter"));
-app.use("/customer", require("./routers/CustomerRouter"));
+app.use("/student", require("./routers/StudentRouter"));

@@ -1,16 +1,18 @@
 const router = require("express").Router();
-const Customer = require("../models/customerModel");
+
 const auth = require("../middleware/auth"); //Checks for cookies
+const Student = require("../models/studentModel");
 
 router.post("/", auth, async (req, res) =>{
     try{
-        const {name} = req.body;
-        const newCustomer = new Customer({
-            name
+        const {firstName, lastName, svnNumber} = req.body;
+        const newStudent = new Student({
+            firstName, lastName, svnNumber
+
         });
-        savedCustomer = await newCustomer.save();
+        savedStudent = await newStudent.save();
         
-        res.json(savedCustomer);
+        res.json(savedStudent);
 
     }catch(err){
         console.error(err);
@@ -20,8 +22,8 @@ router.post("/", auth, async (req, res) =>{
 
 router.get("/", auth, async (req, res) =>{
     try{
-        const customers = await Customer.find();
-        res.json(customers);
+        const students = await Student.find();
+        res.json(students);
 
     }catch(err){
         console.error(err);

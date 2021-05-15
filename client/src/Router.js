@@ -2,9 +2,10 @@ import React, {useContext} from "react";
 import {BrowserRouter, Switch,Route} from "react-router-dom";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
-import Customers from "./components/Customers/Customers";
+import Students from "./components/Students/Students";
 import Navbar from "./components/layout/Navbar";
 import AuthContext from "./context/AuthContext";
+import Home from "./components/Home/Home";
 
 function Router(){
     const {loggedIn} = useContext(AuthContext);
@@ -14,7 +15,7 @@ function Router(){
         <Navbar/>
         <Switch>
             <Route exact path = "/">
-                <div>Home</div>
+                <Home/>
             </Route >
             {loggedIn === false && (
                     <>
@@ -28,8 +29,8 @@ function Router(){
             )}
             {loggedIn === true && (
                 <>
-                    <Route path = "/customer">
-                     <Customers/>
+                    <Route path = "/student">
+                     <Students/>
                     </Route>
                 </>
             )}

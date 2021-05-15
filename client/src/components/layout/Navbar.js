@@ -10,16 +10,16 @@ function Navbar(){
 
     return (
     <div>
-        <Link to = "/">Home</Link>
+        <Link className='navBarLink' to = "/">Home</Link>
         {loggedIn === false  && (
             <>
-                <Link to = "/register">Register</Link>
-                <Link to = "/login">Log in</Link>
+                <Link className='navBarLink' to = "/register">Register</Link>
+                <Link className='navBarLink' to = "/login">Log in</Link>
             </>
         )}
         {loggedIn === true && (
             <> 
-            <Link to = "/customer">Customers</Link>
+            <Link className='navBarLink' to = "/student">Students</Link>
             <LogOutBtn/>
             </>
         )}
