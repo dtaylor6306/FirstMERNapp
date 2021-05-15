@@ -8,7 +8,7 @@ function Students() {
 
     async function getStudents(){
         
-        const studentRes = await axios.get("http://localhost:5000/student/");
+        const studentRes = await axios.get("https://dtaylor6306-firstmern.herokuapp.com/student/");
         setStudents(studentRes.data);
     }
 

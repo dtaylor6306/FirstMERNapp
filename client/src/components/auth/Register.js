@@ -22,7 +22,7 @@ function Register(){
                 passwordVerify
             };
 
-            await axios.post("http://localhost:5000/auth/",registerData );
+            await axios.post("https://dtaylor6306-firstmern.herokuapp.com/auth/",registerData );
             await getLoggedIn();
             history.push("/");
 

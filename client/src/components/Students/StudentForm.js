@@ -18,7 +18,7 @@ function StudentForm({getStudents}) {
                 svnNumber: studentSvnNumber
             }
     
-            await axios.post("http://localhost:5000/student/", studentData);
+            await axios.post("https://dtaylor6306-firstmern.herokuapp.com/student/", studentData);
             getStudents();
         }catch(err){
             console.error(err);
