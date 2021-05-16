@@ -6,7 +6,10 @@ I created a MERN app using react-express api style where the back end and front 
 
 I hosted my front end on [Netlify](https://www.netlify.com/) and hosted my backend api on [Heroku](https://www.heroku.com/)
 
+## WebSite tabs might take a while to load!(Refresh)
 [My Website Hosted on Netlify](https://dtaylor6306-mernapi.netlify.app)
+
+
 
 
 While the website may seem very simple, it was a very large project to take on from scratch with no prior experience(except one react app). When I started I didn't even understand the basics like get and post requests. I am proud of what I have learned and look forward to future projects!
