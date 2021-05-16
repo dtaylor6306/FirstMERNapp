@@ -8,6 +8,8 @@ I hosted my front end on [Netlify](https://www.netlify.com/) and hosted my backe
 
 [My Website Hosted on Netlify](https://dtaylor6306-mernapi.netlify.app/student)
 
+
+While the website may seem very simple, it was a very large project to take on from scratch with no prior experience(except one react app). When I started I didn't even understand the basics like get and post requests. I am proud of what I have learned and look forward to future projects!
 ## Features
 
 This project allows you to create an account, and log in/log out. Log in is validated using the back end, passwords are hashed, and you can create students once logged in. This app saves cookies to check if you are logged in or not. This app also changes which items from the navigator are displayed based on log in status.
